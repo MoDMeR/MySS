@@ -80,12 +80,3 @@ App.service('getGenres', function($rootScope,apiService){
        });
    } 
 });
-
-
-
-
-
-
-
-
-
