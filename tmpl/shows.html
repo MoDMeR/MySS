@@ -1,0 +1,51 @@
+<div class="shows page">
+    <!-- Navbar -->
+    <div ng-include src="'tmpl/navbar.html'"></div>
+    <!-- /Navbar -->
+    
+    <div class="clear"></div>
+    
+    <!-- Page control -->
+    <div ng-include src="'tmpl/page-control.html'"></div>
+    <!-- /Page control -->
+    
+    <!-- Grid -->
+    <div class="mainContainer">
+        <div class="row">
+            <div class="col s4 ww">
+                <div class="ww__title">
+                    Что посмотреть...
+                </div>
+                <div class="b-item b-item-big" style="background-image: url(https://media.myshows.me/shows/normal/6/69/69194c28b5be20e07c8eb556b3255fd0.jpg);">
+                    <div class="b-item__info">
+                        <div class="b-item__info_title">Game of Thrones</div>
+                        <div class="b-item__info_title">Игра престолов</div>
+                        <div class="b-item__info_link right waves-effect waves-light"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s8 list">
+                <ul class="list__menu">
+                    <li><a href="#/home/">Скоро</a></li>
+                    <li class="active"><a href="#/shows/">Мои сериалы</a></li>
+                    <li><a href="#/news/">Новости друзей</a></li>
+                </ul>
+                <div class="list__body">
+                    <div ng-hide="episode.image.length == 0" class="b-item b-item-small" style="background-image: url({{shows.image}});" class="z-depth-2" ng-repeat="shows in serials">
+                        <a href="#/shows/{{shows.showId}}/" class="layer waves-effect waves-light"></a>
+                        <div class="b-item__counter z-depth-2">
+                            <span>{{shows.totalEpisodes - shows.watchedEpisodes}}</span>
+                        </div>
+                        <div class="b-item__date"><span>{{shows.watchStatus}}</span></div>
+                        <div class="b-item__title">{{shows.title}}</div>
+                        <div class="b-item__smallTitle">{{shows.ruTitle}}</div>
+                    </div>
+                </div>
+                <div ng-hide="serials.length > 0" class="empty">
+                    Сериалы не добавлены.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Grid -->
+</div>

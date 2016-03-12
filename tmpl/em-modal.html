@@ -1,0 +1,21 @@
+    <div id="em-{{episode.showId}}" class="em modal modal-fixed-footer">
+        
+        <div class="modal-content">
+            <h4>{{episode.title}} / {{episode.ruTitle}}</h4>
+            
+            <table class="striped">
+              <tbody>
+                <tr ng-repeat="show in episode.unwatchedEpisodesData">
+                  <td>{{show.title}} <sup>{{show.airDate}}</sup></td>
+                  <td>{{show.seasonNumber}}x{{show.episodeNumber}}</td>
+                  <td><a href data-id="{{show.episodeId}}" ng-click="check($event)"><i class="fa fa-eye"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="modal-footer">
+            <a href class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>
+        </div>
+    </div>

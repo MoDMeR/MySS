@@ -1,0 +1,55 @@
+<div class="news page">
+    <!-- Navbar -->
+    <div ng-include src="'tmpl/navbar.html'"></div>
+    <!-- /Navbar -->
+    
+    <div class="clear"></div>
+    
+    <!-- Page control -->
+    <div ng-include src="'tmpl/page-control.html'"></div>
+    <!-- /Page control -->
+    
+    <!-- Grid -->
+    <div class="mainContainer">
+        <div class="row">
+            <div class="col s4 ww">
+                <div class="ww__title">
+                    Что посмотреть...
+                </div>
+                <div class="b-item b-item-big" style="background-image: url(https://media.myshows.me/shows/normal/6/69/69194c28b5be20e07c8eb556b3255fd0.jpg);">
+                    <div class="b-item__info">
+                        <div class="b-item__info_title">Game of Thrones</div>
+                        <div class="b-item__info_title">Игра престолов</div>
+                        <div class="b-item__info_link right waves-effect waves-light"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s8 list">
+                <ul class="list__menu">
+                    <li><a href="#/home/">Скоро</a></li>
+                    <li><a href="#/shows/">Мои сериалы</a></li>
+                    <li class="active"><a href="#/news/">Новости друзей</a></li>
+                </ul>
+                <div class="list__body">
+                    <ul class="collection" ng-repeat="(d, n) in news">
+                        <li class="collection-header"><h4>{{d}}</h4></li>
+                        <li class="collection-item avatar" ng-repeat="user in n">
+                            <i class="circle">{{user.login | limitTo:1}}</i>
+                            <span class="title">{{user.login}}</span>
+                            <p ng-hide="!user.episode">
+                                Посмотрел &#91; {{user.episode}} &#93; серию сериала <span>{{user.show}}</span>
+                            </p>
+                            <p ng-hide="user.episode">
+                                Оценил {{user.episodes}} серии сериала <span>{{user.show}}</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div ng-hide="news.length > 0" class="empty">
+                        Ваши друзья не активны или у вас нет друзей =(
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Grid -->
+</div>

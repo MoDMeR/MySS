@@ -1,0 +1,19 @@
+{
+    "app": {
+      "launch": {
+         "local_path": "index.html"
+      }
+    },
+    "description": "Клиент для сервиса myshows.me на котором вы можете: составлять свой список сериалов, узнавать дату выхода ближайших серий и многое другое.",
+    "icons": {
+      "128": "img/icons/128.png",
+      "48": "img/icons/48.png",
+      "16": "img/icons/16.png"
+    },
+   "permissions": ["*://*.myshows.me/*", "notifications", "storage" ],
+   "name": "Мои сериалы",
+   "version": "0.0.1",
+   "manifest_version": 2,
+   "permissions": [ "notifications" ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

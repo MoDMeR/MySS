@@ -1,0 +1,58 @@
+<div class="detail page">
+    <div class="detail__bg" style="background: url({{show.image}});"></div>
+    <!-- Navbar -->
+    <div ng-include src="'tmpl/navbar.html'"></div>
+    <!-- /Navbar -->
+    
+    <div class="clear"></div>
+    
+    <!-- Page control -->
+    <div ng-include src="'tmpl/page-control.html'"></div>
+    <!-- /Page control -->
+    
+    <div class="mainContainer">
+        
+        <div class="detail__smallTitle">{{show.ruTitle}}</div>
+        <div class="detail__title">{{show.title}}</div>
+        <div class="detail__info">
+            <div class="detail__info_item">
+                <div id="detRating" class="rating" data-rate="{{show.rating}}"></div>
+            </div>
+<!--
+            <div class="detail__info_item watch">
+                <a href><i class="fa fa-eye"></i> Cмотреть</a>
+            </div>
+-->
+        </div>
+        <table class="detail__about">
+            <tr>
+                <td class="detail__about_key">Страна:</td>
+                <td class="detail__about_value">{{show.country}}</td>
+            </tr>
+            <tr>
+                <td class="detail__about_key">Длительность серии:</td>
+                <td class="detail__about_value">{{show.runtime}} мин.</td>
+            </tr>
+            <tr>
+                <td class="detail__about_key">Год:</td>
+                <td class="detail__about_value">{{show.year}}</td>
+            </tr>
+            <tr>
+                <td class="detail__about_key">Зрителей:</td>
+                <td class="detail__about_value">{{show.watching}}</td>
+            </tr>
+            <tr>
+                <td class="detail__about_key">Статус:</td>
+                <td class="detail__about_value">{{show.status}}</td>
+            </tr>
+            <tr>
+                <td class="detail__about_key">Рейтинг:</td>
+                <td class="detail__about_value">{{show.rating}}</td>
+            </tr>
+        </table>
+        <div class="detail__description" ng-bind-html="show.description">
+            
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="appName + ' - ' + title">MySS</title>
+    
+    <!-- Style -->
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" href="style/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- /Style -->
+    
+    <!-- Lib -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/angular-sanitize.min.js"></script>
+    <script src="lib/md5.min.js"></script>
+    <script src="lib/jquery.raty-fa.js"></script>
+    <!-- /Lib -->
+    
+    <!-- js -->
+    <script src="js/myshows.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/app.js"></script>
+    <!-- /js -->
+    
+</head>
+<body>
+    
+    <div ng-view></div>
+    
+</body>
+</html>

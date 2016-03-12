@@ -1,0 +1,16 @@
+<nav class="page__title" ng-controller="navbarController">
+    <div class="nav-wrapper">
+        <a href="#/home/" class="brand-logo" ng-bind="appName">MySS</a>
+        <div class="page__userBlock right">
+            <div class="page__userBlock_ava">
+                <img src="{{avatar}}" class="z-depth-1" alt="" />
+            </div>
+            <a href="#" class="page__userBlock_name dropdown-button" data-activates="user_menu">{{name}}</a>
+            <ul id='user_menu' class='dropdown-content'>
+                <li><a href="#/about/">О приложении</a></li>
+                <li class="divider"></li>
+                <li><a href="#/login/">Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic);
+
+@font: 'Roboto', sans-serif;
+
+.opacity(@double) {
+    opacity: @double;
+    filter: alpha(opacity=@double);
+    -moz-opacity: @double;
+    -khtml-opacity: @double;
+    z-index: 1;
+}
+
+.inline() {
+  display: inline-block !important;
+  zoom: 1;
+  *display: inline;
+  float: none !important;
+}
+
+.transition() {
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.clear() {
+  float: none;
+  clear: both;
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+.clear {
+    .clear;
+}
